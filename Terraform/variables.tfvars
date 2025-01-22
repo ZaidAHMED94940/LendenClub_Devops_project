@@ -1,0 +1,8 @@
+vpc-name      = "my-new-vpc"
+igw-name      = "my-new-igw"
+subnet-name   = "my-new-subnet"
+rt-name       = "my-new-route-table"
+sg-name       = "my-new-sg"
+instance-name = "my-new-server"
+key-name      = "zaid-ahmed"
+iam-role      = "my-new-iam-role"

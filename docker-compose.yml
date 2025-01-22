@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  backend:
+    image: backend:notes
+    container_name: backend_service
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000" # Expose backend service on port 5000
+    networks:
+      - app_network
+
+  frontend:
+    image: frontend:notes
+    container_name: frontend_service
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Expose frontend service on port 3000
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
