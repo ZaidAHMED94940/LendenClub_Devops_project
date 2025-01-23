@@ -54,7 +54,8 @@ When prompted, type 'yes' to confirm the changes.
 ### Connecting to AWS Server
 After successful deployment, get the server IP:
 You will see that the server is launched 
-![Description of Image](assets/image3.jpg)
+![Description of Image](assets/image4.jpg)
+
 Connect to the server:
 ```bash
 ssh -i "your-key.pem" ubuntu@<server_ip>
@@ -72,6 +73,7 @@ Create and configure the .env file:
 ```bash
 cat << EOF > .env
 MONGO_URI=<YOUR MONGO_DB_STRING>
+PORT=5000
 EOF
 ```
 ![Description of Image](assets/image7.jpg)
@@ -132,7 +134,7 @@ docker ps
 ![Description of Image](assets/image11.jpg)
 
 ## The Application is running succesfully 
-![Description of Image](assets/image11.jpg)
+![Description of Image](assets/image14.jpg)
 Add the task
 ![Description of Image](assets/image13.jpg)
 
