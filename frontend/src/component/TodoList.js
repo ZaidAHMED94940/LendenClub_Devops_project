@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // Helper function to handle API requests
-const apiUrl = `${process.env.REACT_APP_API_URL}/tasks`;
+const apiUrl = `${process.env.REACT_APP_API_URL}/api/tasks`;
 
 const TodoList = () => {
   const [tasks, setTasks] = useState([]);
