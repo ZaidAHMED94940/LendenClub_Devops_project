@@ -4,13 +4,8 @@
 ```
 .
 ├── terraform/
-│   ├── variables.tf
-│   ├── main.tf
-│   └── terraform.tfvars
 ├── backend/
-│   └── .env
 ├── frontend/
-│   └── .env
 └── docker-compose.yml
 ```
 
@@ -24,9 +19,14 @@ cd terraform
 
 Export the necessary AWS credentials:
 ```bash
-export AWS_ACCESS_KEY_ID="your_access_key"
-export AWS_SECRET_ACCESS_KEY="your_secret_key"
-export AWS_DEFAULT_REGION="your_region"
+set AWS_ACCESS_KEY_ID=<your data>
+set AWS_SECRET_ACCESS_KEY=<your data>
+set AWS_DEFAULT_REGION=<your data>
+set AWS_CONFIG_FILE=<your data>
+set TF_VAR_AWS_REGION=<your data>
+set TF_VAR_AWS_ACCOUNT_ID=<your data>
+set TF_VAR_ENDPOINT=<your data>
+set TF_VAR_PEMFILE=<your data>
 ```
 
 ### Terraform Deployment Steps
@@ -36,6 +36,7 @@ export AWS_DEFAULT_REGION="your_region"
 terraform init
 ```
 This command initializes Terraform, downloads required providers, and sets up the backend.
+![Description of Image](assets/image.jpg)
 
 2. Review the deployment plan:
 ```bash
